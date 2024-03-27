@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 public class AbortException extends Exception {
     public AbortException() {
         super();

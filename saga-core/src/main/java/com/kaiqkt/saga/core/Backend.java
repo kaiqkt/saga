@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 import java.util.function.Function;
 
 public interface Backend {

@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -82,7 +84,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
+        return "com.kaiqkt.core.Transaction{" +
                 "node=" + node +
                 ", payload=" + payload +
                 ", attempt=" + attempt +

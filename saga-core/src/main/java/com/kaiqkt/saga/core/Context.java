@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -39,7 +41,7 @@ public class Context {
 
     @Override
     public String toString() {
-        return "Context{" +
+        return "com.kaiqkt.core.Context{" +
                 "payload=" + payload +
                 '}';
     }

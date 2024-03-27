@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 import java.util.HashMap;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -20,7 +22,7 @@ public class Orchestrator implements AutoCloseable {
     }
 
     public void start(Node node, HashMap<String, Object> payload) throws Exception {
-        if (closed) throw new IllegalArgumentException("Orchestrator is closed");
+        if (closed) throw new IllegalArgumentException("com.kaiqkt.core.Orchestrator is closed");
 
         Transaction transaction = new Transaction(node, payload);
         Executor executor = new Executor.Schedule(transaction);

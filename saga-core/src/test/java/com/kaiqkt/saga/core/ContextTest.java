@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

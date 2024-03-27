@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 public class NodeConfig {
     private final Command action;
     private final Command compensation;
@@ -25,7 +27,7 @@ public class NodeConfig {
 
     @Override
     public String toString() {
-        return "NodeConfig{" +
+        return "com.kaiqkt.core.NodeConfig{" +
                 "action=" + action +
                 ", compensation=" + compensation +
                 '}';

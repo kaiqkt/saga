@@ -1,3 +1,5 @@
+package com.kaiqkt.core;
+
 import java.util.Objects;
 
 public abstract class Executor {
