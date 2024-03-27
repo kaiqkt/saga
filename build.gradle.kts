@@ -6,7 +6,7 @@ plugins {
 
 allprojects {
 
-    group = "org.example"
+    group = "com.kaiqkt"
     version = "1.0.0"
 
     repositories {
