@@ -1,3 +1,5 @@
+package com.kaiqkt.saga.core;
+
 import java.util.Objects;
 
 public class Node {
@@ -72,7 +74,7 @@ public class Node {
     }
     @Override
     public String toString() {
-        return "Node{" +
+        return "com.kaiqkt.saga.core.Node{" +
                 "command=" + command + "\n" +
                 ", nextOnSuccess=" + nextOnSuccess +
                 ", nextOnFailure=" + nextOnFailure + "\n" +

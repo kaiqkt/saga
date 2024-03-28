@@ -1,8 +1,10 @@
+package com.kaiqkt.saga.jms;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kaiqkt.core.Backend;
-import com.kaiqkt.core.Executor;
-import com.kaiqkt.core.Transaction;
+import com.kaiqkt.saga.core.Backend;
+import com.kaiqkt.saga.core.Executor;
+import com.kaiqkt.saga.core.Transaction;
 
 import javax.jms.BytesMessage;
 import javax.jms.DeliveryMode;

@@ -1,4 +1,4 @@
-package com.kaiqkt.core;
+package com.kaiqkt.saga.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class SagaBuilder {
      * @param actions       The list of actions to be included in the saga.
      * @param compensations The list of compensations to be included in the saga.
      * @param incompensables The list of incompensable actions to be included in the saga.
-     * @return A com.kaiqkt.core.Node object representing the saga.
+     * @return A com.kaiqkt.saga.core.Node object representing the saga.
      */
     public static Node buildSaga(List<Command> actions, List<Command> compensations, List<Command> incompensables) {
         List<Node> compensationNodes = buildCompensationNodes(compensations);
@@ -23,10 +23,10 @@ public class SagaBuilder {
 
     /**
      * Constructs a graph of incompensable actions. It iterates over the list of incompensable actions in reverse order,
-     * creating a new com.kaiqkt.core.Node for each action and linking it to the previous node. If the list of incompensable actions is null, it returns null.
+     * creating a new com.kaiqkt.saga.core.Node for each action and linking it to the previous node. If the list of incompensable actions is null, it returns null.
      *
      * @param compensations The list of incompensable actions to be included in the graph.
-     * @return A com.kaiqkt.core.Node object representing the incompensable graph, or null if the input list is null.
+     * @return A com.kaiqkt.saga.core.Node object representing the incompensable graph, or null if the input list is null.
      */
     public static Node buildIncompensableGraph(List<Command> compensations) {
         Node result = null;
@@ -44,13 +44,13 @@ public class SagaBuilder {
 
     /**
      * Constructs the graph of actions. It iterates over the list of actions in reverse order,
-     * creating a new com.kaiqkt.core.Node for each action. Each node is linked to the previous node (the uncompensable node or the last compensation node)
+     * creating a new com.kaiqkt.saga.core.Node for each action. Each node is linked to the previous node (the uncompensable node or the last compensation node)
      * and to the next compensation node in case of failure.
      *
      * @param actions       The list of actions to be included in the graph.
-     * @param uncompensableNode The com.kaiqkt.core.Node representing the uncompensable graph.
-     * @param compensationsNode The list of com.kaiqkt.core.Node objects representing the compensation nodes.
-     * @return A com.kaiqkt.core.Node object representing the action graph.
+     * @param uncompensableNode The com.kaiqkt.saga.core.Node representing the uncompensable graph.
+     * @param compensationsNode The list of com.kaiqkt.saga.core.Node objects representing the compensation nodes.
+     * @return A com.kaiqkt.saga.core.Node object representing the action graph.
      */
     public static Node buildActionGraph(List<Command> actions, Node uncompensableNode, List<Node> compensationsNode) {
         Node result = uncompensableNode;
@@ -69,10 +69,10 @@ public class SagaBuilder {
 
     /**
      * Constructs a list of compensation nodes from the list of compensations.
-     * It iterates over the list of compensations, creating a new com.kaiqkt.core.Node for each compensation and linking it to the last non-null node.
+     * It iterates over the list of compensations, creating a new com.kaiqkt.saga.core.Node for each compensation and linking it to the last non-null node.
      *
      * @param compensations The list of compensations to be included in the list of nodes.
-     * @return A list of com.kaiqkt.core.Node objects representing the compensation nodes.
+     * @return A list of com.kaiqkt.saga.core.Node objects representing the compensation nodes.
      */
     public static List<Node> buildCompensationNodes(List<Command> compensations) {
         List<Node> nodes = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.kaiqkt.core;
+package com.kaiqkt.saga.core;
 
 public class AbortException extends Exception {
     public AbortException() {

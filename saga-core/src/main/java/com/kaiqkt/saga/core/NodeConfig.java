@@ -1,4 +1,4 @@
-package com.kaiqkt.core;
+package com.kaiqkt.saga.core;
 
 public class NodeConfig {
     private final Command action;
@@ -27,7 +27,7 @@ public class NodeConfig {
 
     @Override
     public String toString() {
-        return "com.kaiqkt.core.NodeConfig{" +
+        return "com.kaiqkt.saga.core.NodeConfig{" +
                 "action=" + action +
                 ", compensation=" + compensation +
                 '}';

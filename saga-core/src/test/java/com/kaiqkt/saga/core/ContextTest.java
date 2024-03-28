@@ -1,4 +1,4 @@
-package com.kaiqkt.core;
+package com.kaiqkt.saga.core;
 
 import org.junit.jupiter.api.Test;
 
