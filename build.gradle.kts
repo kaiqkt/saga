@@ -7,7 +7,7 @@ plugins {
 allprojects {
 
     group = "com.kaiqkt"
-    version = "1.0.1"
+    version = "1.0.0"
 
     repositories {
         mavenCentral()
@@ -35,26 +35,6 @@ allprojects {
 
         reports {
             html.required.set(true)
-        }
-    }
-
-    publishing {
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/kaiqkt/saga")
-                credentials {
-                    username = project.findProperty("gpr.user") as String? ?: System.getenv("GPR_USER")
-                    password = project.findProperty("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
-                }
-            }
-        }
-        publications {
-            publications {
-                create<MavenPublication>("maven") {
-                    from(components["java"])
-                }
-            }
         }
     }
 }
